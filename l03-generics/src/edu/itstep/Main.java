@@ -1,8 +1,6 @@
 package edu.itstep;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -84,6 +82,8 @@ public class Main {
         List<Integer> ints = Arrays.asList(1, 2);
         Collections.copy(nums, ints);
         System.out.println(nums);
+
+        printCollection(nums);
     }
 
     public static <T> Object getFirst(List<? super T> list) {
@@ -101,6 +101,20 @@ public class Main {
     public static <T> void copy(List<? super T> dest, List<? extends T> src) {
     }
 
+    private static void printCollection(Collection<?> c) {
+        for (Object o : c) {
+            System.out.println(o);
+        }
+    }
+
+    private static void rawParameters(){
+        ArrayList<String> strings = new ArrayList<>();
+
+        ArrayList arrayList = new ArrayList();
+        arrayList = strings;
+        strings = arrayList;
+        arrayList.add(1);
+    }
 }
 
 class Cell<T> {
