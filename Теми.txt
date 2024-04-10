@@ -1,0 +1,13 @@
+Redis
+Reflection API
+Cache
+Docker
+Microservices
+AOP
+REST
+SOLID
+Thymeleaf
+Template Engine?
+WebSockets
+Garbage Collector
+JMM - Java memory model
