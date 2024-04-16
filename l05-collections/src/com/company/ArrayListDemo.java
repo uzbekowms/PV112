@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.ListIterator;
 
 public class ArrayListDemo {
@@ -16,7 +18,7 @@ public class ArrayListDemo {
 
     private void create() {
         //створюємо і наповнюємо ArrayList
-        stringArrayList = new ArrayList<String>();
+        stringArrayList = new ArrayList<>();
         stringArrayList.add("Привіт");
         stringArrayList.add("тобі");
         stringArrayList.add("божевільний");

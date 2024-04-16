@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.TreeSet;
 
 public class TreeSetDemo {

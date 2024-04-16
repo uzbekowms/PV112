@@ -6,7 +6,8 @@ public class CollectionDemo {
 
     public static void main(String[] args) {
         // ArrayList
-        List<String> a1 = new ArrayList<>();
+
+        List<String> a1 = new ArrayList<>(5);
         a1.add("Зоря");
         a1.add("Марк");
         a1.add("Айан");
@@ -14,7 +15,7 @@ public class CollectionDemo {
         System.out.print("\t" + a1);
 
         // LinkedList
-        List<String> l1 = new LinkedList<String>();
+        List<String> l1 = new LinkedList<>();
         l1.add("Зоря");
         l1.add("Марк");
         l1.add("Айан");
@@ -32,7 +33,7 @@ public class CollectionDemo {
         System.out.print("\t" + s1);
 
         // HashMap
-        Map<String, String> m1 = new HashMap<String, String>();
+        Map<String, String> m1 = new HashMap<>();
         m1.put("Зоря", "8");
         m1.put("Марк", "31");
         m1.put("Айан", "12");
