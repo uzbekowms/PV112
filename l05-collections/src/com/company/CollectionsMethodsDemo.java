@@ -2,11 +2,13 @@ package com.company;
 
 import java.util.*;
 
+import static java.util.Collections.max;
+
 public class CollectionsMethodsDemo {
 
     public static void main(String[] args) {
         List<Integer> a = Arrays.asList(0, 1, 2, 3, 3, -4);
-        System.out.println(Collections.max(a)); // 3
+        System.out.println(max(a)); // 3
         System.out.println(Collections.min(a)); // -4
         System.out.println(Collections.frequency(a, 2)); // 1 раз
         System.out.println(Collections.frequency(a, 3)); // 2 рази

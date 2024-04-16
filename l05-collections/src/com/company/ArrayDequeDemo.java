@@ -1,6 +1,6 @@
 package com.company;
 
-import java.util.ArrayDeque;
+import java.util.*;
 
 public class ArrayDequeDemo {
 
@@ -25,9 +25,17 @@ public class ArrayDequeDemo {
         numbers.offer("Третій");
         System.out.println("Перший елемент ArrayDeque: " + numbers.getFirst());//Отримуємо перший елемент, але не видаляємо
         System.out.println("Вміст ArrayDeque: " + numbers);
-        System.out.println(numbers.poll()); //витягнути і видалити з голови
-        System.out.println(numbers.poll());
-        System.out.println(numbers.poll());
-        System.out.println(numbers.poll());
+//        System.out.println(numbers.poll()); //витягнути і видалити з голови
+//        System.out.println(numbers.poll());
+//        System.out.println(numbers.poll());
+//        System.out.println(numbers.poll());
+
+        Iterator<String> iterator = numbers.iterator();
+        numbers.removeLast();
+
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+
     }
 }

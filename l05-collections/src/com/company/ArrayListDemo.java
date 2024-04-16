@@ -1,19 +1,30 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.ListIterator;
+import java.util.*;
 
 public class ArrayListDemo {
 
     private ArrayList<String> stringArrayList;
 
     public static void main(String[] args) {
-        ArrayListDemo arrayList = new ArrayListDemo();
-        arrayList.create();
-        arrayList.getData();
-        arrayList.iterateData();
+//        ArrayListDemo arrayList = new ArrayListDemo();
+//        arrayList.create();
+//        arrayList.getData();
+//        arrayList.iterateData();
+
+        List<String> stringArrayList = Collections.synchronizedList(new ArrayList<>());
+        stringArrayList.add("Привіт");
+        stringArrayList.add("тобі");
+        stringArrayList.add("божевільний");
+        stringArrayList.add("світе!");
+
+        synchronized (stringArrayList) {
+            Iterator<String> iterator = stringArrayList.iterator();
+
+            while (iterator.hasNext()) {
+                System.out.println(iterator.next());
+            }
+        }
     }
 
     private void create() {

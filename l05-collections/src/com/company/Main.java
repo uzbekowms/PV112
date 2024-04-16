@@ -35,5 +35,6 @@ public class Main {
         System.out.println(car2.hashCode());
         System.out.println(car3.hashCode());
         System.out.println(stringSet);
+
     }
 }
