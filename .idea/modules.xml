@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-introducing-in-java/01-introducing-in-java.iml" filepath="$PROJECT_DIR$/01-introducing-in-java/01-introducing-in-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-oop-part-1/02-oop-part-1.iml" filepath="$PROJECT_DIR$/02-oop-part-1/02-oop-part-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PV112.iml" filepath="$PROJECT_DIR$/.idea/PV112.iml" />
+      <module fileurl="file://$PROJECT_DIR$/l03-generics/l03-generics.iml" filepath="$PROJECT_DIR$/l03-generics/l03-generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/l04-exception-handling/l04-exception-handling.iml" filepath="$PROJECT_DIR$/l04-exception-handling/l04-exception-handling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/l05-collections/l05-collections.iml" filepath="$PROJECT_DIR$/l05-collections/l05-collections.iml" />
+    </modules>
+  </component>
+</project>

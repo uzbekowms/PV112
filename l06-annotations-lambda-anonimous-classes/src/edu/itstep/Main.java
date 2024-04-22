@@ -134,7 +134,8 @@ public class Main implements Serializable {
         };
 
         int a = 5;
-        
+
+
         Predicate<Integer> predicate = (num) -> num % a == 0;
 
 
