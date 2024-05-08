@@ -1,10 +1,13 @@
 package edu.itstep.repository;
 
 import com.mysql.cj.jdbc.result.CachedResultSetMetaDataImpl;
+import edu.itstep.mapper.Student;
 
 import javax.sql.rowset.CachedRowSet;
 import javax.sql.rowset.JdbcRowSet;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StudentRepository extends DatabaseConnector {
     public StudentRepository() throws SQLException, ClassNotFoundException {
@@ -32,8 +35,10 @@ public class StudentRepository extends DatabaseConnector {
 
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(sqlSelect);
+        List<Student> students = new ArrayList<>();
 
         while (resultSet.next()) {
+            
             System.out.println(resultSet.getString("first_name") + " " + resultSet.getString("last_name"));
         }
     }
@@ -143,8 +148,9 @@ public class StudentRepository extends DatabaseConnector {
         int[] ints = preparedStatement.executeBatch();
 
         for (int i : ints
-             ) {
+        ) {
             System.out.println(i);
         }
+        connection.close();
     }
 }
