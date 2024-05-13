@@ -4,6 +4,9 @@
 
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
+    <welcome-file-list>
+        <welcome-file>/500.html</welcome-file>
+    </welcome-file-list>
     <context-param>
         <param-name>email</param-name>
         <param-value>emailforxontext</param-value>
@@ -29,4 +32,5 @@
         <error-code>500</error-code>
         <location>/500.html</location>
     </error-page>
+
 </web-app>
