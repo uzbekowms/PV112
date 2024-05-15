@@ -11,3 +11,4 @@ Template Engine?
 WebSockets
 Garbage Collector
 JMM - Java memory model
+MinIO
