@@ -2,27 +2,29 @@
   Created by IntelliJ IDEA.
   User: teacher
   Date: 17.05.2024
-  Time: 19:28
+  Time: 20:15
   To change this template use File | Settings | File Templates.
 --%>
-<%
-    String headers = "Header";
-    pageContext.setAttribute("headers", "Header From page Context");
-%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-<p>Name: ${page}</p>
-<p>Age: ${age}</p>
-<p>Header: ${headers}</p>
-<!--
-PageContext
-request
-session
-app
--->
+${users[0]}
+${users[1]}
+<!-- Java Bean
+ 1. NoArgsConstructor
+ 2. Getters Setters
+ 3. get set
+ firstName
+ getFirstName
+
+ is
+
+ enabled
+ isEnabled
+ Serializable
+ -->
 </body>
 </html>
