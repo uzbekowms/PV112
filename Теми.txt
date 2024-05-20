@@ -1,5 +1,5 @@
 Redis
-Reflection API
+Reflection API +
 Cache
 Docker
 Microservices
@@ -7,8 +7,9 @@ AOP
 REST
 SOLID
 Thymeleaf
-Template Engine?
+Template Engine? - JSP
 WebSockets
 Garbage Collector
 JMM - Java memory model
 MinIO
+GraphQL
