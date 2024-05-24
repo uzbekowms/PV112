@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: l21-spring-boot-web
+  output:
+    ansi:
+      enabled: always
+
+server:
+  port: 8000
+  servlet:
+    context-path: /api
