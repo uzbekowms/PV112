@@ -6,9 +6,17 @@
 </head>
 <body>
 <table>
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
     <tr th:each="student, iStat : ${students}"
             th:style="${iStat.odd} ? 'color: red; font-weight: bold;'"
             th:alt-title="${iStat.even}? 'even' : 'odd'">
+        <td th:text="${iStat.index}"></td>
         <td th:text="${student.id}"/>
         <td th:text="${student.name}"/>
     </tr>

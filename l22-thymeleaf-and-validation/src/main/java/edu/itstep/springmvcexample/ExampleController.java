@@ -3,16 +3,11 @@ package edu.itstep.springmvcexample;
 import com.fasterxml.jackson.annotation.JsonView;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,13 +16,13 @@ public class ExampleController {
 
 
     @GetMapping("/users/{userId}/cars")
-    public String getUserCars(){
+    public String getUserCars() {
         return "";
     }
 
 
     @GetMapping("/users/{userId}/cars/{carId}")
-    public String getUserCar(){
+    public String getUserCar() {
         return "";
     }
 
@@ -38,16 +33,15 @@ public class ExampleController {
         return "index";
     }
 
-/*    @GetMapping("/login")
-    public String login(Model model) {
-        model.addAttribute("formData", new Student(1, "Sasha", "Sashasasadas"));
-        return "login";
-    }*/
+//    @GetMapping("/login")
+//    public String login(Model model) {
+//        model.addAttribute("formData", new Student(1, "Sasha", "Sashasasadas"));
+//        return "login";
+//    }
 
     @PostMapping("/create")
     public String createUser(@ModelAttribute("formData") @Valid Student student, Model model) {
         System.out.println(student);
-
         return "redirect:/greetings";
     }
 
@@ -91,14 +85,14 @@ public class ExampleController {
         model.addAttribute("students", students);
         return "loop";
     }
-
+*/
     @GetMapping("/loops2")
     public String loops2(Model model) {
         List<Student> students = List.of(new Student(1, "Sasha"), new Student(2, "Masha"), new Student(3, "Slava"));
         model.addAttribute("students", students);
         return "loop2";
     }
-
+/*
     @GetMapping("/object")
     public String object(Model model) {
         List<Student> students = List.of(new Student(1, "Sasha"), new Student(2, "Masha"), new Student(3, "Slava"));
@@ -121,27 +115,39 @@ public class ExampleController {
 
 
 }
+//
+//@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
+//class Student {
+//    @Null(groups = View.Public.class)
+//    @NotNull(groups = Group.OnUpdate.class)
+//    private int id;
+//    @NotBlank(message = "Name cannot be blank")
+//    private String name;
+//    @NotBlank(message = "Last name cannot be blank")
+//    @Email
+//    private String lastName;
+//
+//    @Size(min = 18, max = 120, message = "Invalid age {min} {max}")
+//    private int age;
+//
+//
+//    public String getUser() {
+//        return "Test User";
+//    }
+//}
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
+@Getter
+@Setter
+@ToString
 class Student {
-    @Null(groups = View.Public.class)
-    @NotNull(groups = Group.OnUpdate.class)
     private int id;
-    @NotBlank(message = "Name cannot be blank")
     private String name;
-    @NotBlank(message = "Last name cannot be blank")
-    @Email
-    private String lastName;
-
-    @Size(min = 18, max = 120, message = "Invalid age {min} {max}")
-    private int age;
-
-
-    public String getUser() {
-        return "Test User";
-    }
+    //private String lastName;
 }
 
 final class Group {

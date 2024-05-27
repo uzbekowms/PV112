@@ -5,6 +5,7 @@ import jakarta.validation.constraints.*;
 import lombok.*;
 import org.hibernate.validator.internal.constraintvalidators.bv.NotBlankValidator;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.PostMapping;
 import ua.techtask.usersservice.validation.constraint.MinAgeConstraint;
 import ua.techtask.usersservice.validation.constraint.TextConstraint;
 import ua.techtask.usersservice.validation.group.OnCreate;
@@ -46,3 +47,35 @@ public class UserDTO {
 
     private String phone;
 }
+//
+//class Example {
+//    @AssertFalse
+//    private boolean isInvalid;
+//    @AssertTrue
+//    private boolean isValid;
+//    @DecimalMax("100")
+//    private double maxAmount;
+//    @DecimalMin("10")
+//    private double minAmount;
+//
+//    @Digits(integer = 5, fraction = 2)
+//    @Email
+//    @Future
+//    @FutureOrPresent
+//    @Past
+//    @PastOrPresent
+//    @Max(10)
+//    @Min(10)
+//    @Negative
+//    @NegativeOrZero
+//    @Positive
+//    @PositiveOrZero
+//    @NotBlank
+//    @NotEmpty
+//    @NotNull
+//    @Null
+//    //@Pattern()
+//    @Size(min = 2, max = 10)
+//    String message;
+//
+//}
