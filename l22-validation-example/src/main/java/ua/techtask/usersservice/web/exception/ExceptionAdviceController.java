@@ -57,4 +57,10 @@ public class ExceptionAdviceController {
     public String handleIllegalArgumentException(IllegalArgumentException ex) {
         return ex.getMessage();
     }
+
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ExceptionHandler({Exception.class})
+    public String handleException(Exception ex) {
+        return "Sori :(";
+    }
 }
