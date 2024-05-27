@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: usersservice
+  output:
+    ansi:
+      enabled: always
+server:
+  port: 8080
+validation:
+  age:
+    min: 18
