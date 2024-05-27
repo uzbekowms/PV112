@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:insert="~{fragments/header :: header}"></div>
+<main>
+    <div th:replace="~{fragments/menu :: menu(${shoe})}"></div>
+    <section>
+        <th:block th:each="student: ${students}">
+            <div th:replace="~{fragments/card :: card(${student})}"></div>
+        </th:block>
+    </section>
+</main>
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>

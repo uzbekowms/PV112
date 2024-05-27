@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr th:each="student, iStat : ${students}"
+            th:style="${iStat.odd} ? 'color: red; font-weight: bold;'"
+            th:alt-title="${iStat.even}? 'even' : 'odd'">
+        <td th:text="${student.id}"/>
+        <td th:text="${student.name}"/>
+    </tr>
+</table>
+</body>
+</html>

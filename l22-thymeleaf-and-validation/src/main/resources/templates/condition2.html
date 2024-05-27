@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <span th:if="${gender == 'F'}">Female</span>
+    <span th:unless="${gender == 'F'}">Male</span>
+    <span th:if="4 gt 5">Text</span>
+</div>
+</body>
+</html>

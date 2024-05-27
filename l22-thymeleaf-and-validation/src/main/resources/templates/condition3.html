@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:switch="${role}">
+    <p th:case="'admin'">User is an administrator</p>
+    <p th:case="'manager'">User is a manager</p>
+    <p th:case="*">User is some other thing</p>
+</th:block>
+</body>
+</html>

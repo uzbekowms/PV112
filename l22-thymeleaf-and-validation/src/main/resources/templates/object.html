@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr th:each="student, iStat : ${students}"
+            th:style="${iStat.odd} ? 'color: red; font-weight: bold;'"
+            th:alt-title="${iStat.even}? 'even' : 'odd'"
+            th:object="${student}">
+        <td th:text="*{id}"/>
+        <td th:text="*{name}"/>
+    </tr>
+</table>
+Established locale country: <span th:text="${#locale.country}">US</span>.
+</body>
+</html>
