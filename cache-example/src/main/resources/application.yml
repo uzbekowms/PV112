@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: cache-example
+  data:
+    web:
+      pageable:
+        max-page-size: 100
+  datasource:
+    url: jdbc:mysql://localhost:3306/cachedb
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+#        default-page-size: 30
